@@ -15,7 +15,7 @@ if(process.env.NODE_ENV!=='Production'){
 
 //middleware
 app.use(cors({
-    origin: '*',
+    origin: 'https://full-stack-ecommerce-website-frontend.vercel.app',
     credentials: true }));
 app.use(bodyParser.urlencoded({extended:true,limit:"100kb"}));
 app.use(fileupload());
