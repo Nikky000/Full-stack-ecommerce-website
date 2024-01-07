@@ -4,7 +4,7 @@ import axios from "axios";
 const createNewOrder = createAsyncThunk("add/newOrder", async (data,{rejectWithValue}) => {
     try {
         const config={headers:{'Content-Type':'application/json'},withCredentials:true};
-        const response = await axios.post(`https://full-stack-ecommerce-website-api.vercel.app//api/newOrder`,data,config);
+        const response = await axios.post(`https://full-stack-ecommerce-website-api.vercel.app/api/newOrder`,data,config);
         return response.data.order;
     }catch(error) {
         return rejectWithValue(error.response.data.message);
@@ -13,7 +13,7 @@ const createNewOrder = createAsyncThunk("add/newOrder", async (data,{rejectWithV
 // for getting All Orders
 const getAllOrders = createAsyncThunk("get/getAllOrders", async (data,{rejectWithValue}) => {
     try {
-        const response = await axios.get(`https://full-stack-ecommerce-website-api.vercel.app//api/orders/me`,{withCredentials:true});
+        const response = await axios.get(`https://full-stack-ecommerce-website-api.vercel.app/api/orders/me`,{withCredentials:true});
         return response.data.order;
     }catch(error) {
         return rejectWithValue(error.response.data.message);
@@ -22,7 +22,7 @@ const getAllOrders = createAsyncThunk("get/getAllOrders", async (data,{rejectWit
 //for getting particular order --admin
 const getOrder = createAsyncThunk("get/getOrder", async (id,{rejectWithValue}) => {
     try {
-        const response = await axios.get(`https://full-stack-ecommerce-website-api.vercel.app//api/order/me/${id}`,{withCredentials:true});
+        const response = await axios.get(`https://full-stack-ecommerce-website-api.vercel.app/api/order/me/${id}`,{withCredentials:true});
         return response.data.order;
     }catch(error) {
         return rejectWithValue(error.response.data.message);
@@ -32,7 +32,7 @@ const getOrder = createAsyncThunk("get/getOrder", async (id,{rejectWithValue}) =
 //for getting all Orders --admin
 const getOrdersList = createAsyncThunk("get/getOrdersList", async (data,{rejectWithValue}) => {
     try {
-        const response = await axios.get(`https://full-stack-ecommerce-website-api.vercel.app//api/getAllOrders`,{withCredentials:true});
+        const response = await axios.get(`https://full-stack-ecommerce-website-api.vercel.app/api/getAllOrders`,{withCredentials:true});
         return response.data;
     }catch(error) {
         return rejectWithValue(error.response.data.message);
@@ -42,7 +42,7 @@ const getOrdersList = createAsyncThunk("get/getOrdersList", async (data,{rejectW
 // for deleting the Order --admin
 const deleteOrder= createAsyncThunk("delete/deleteOrder", async (id,{rejectWithValue}) => {
     try {
-        const response = await axios.delete(`https://full-stack-ecommerce-website-api.vercel.app//api/deleteOrder/${id}`,{withCredentials:true});
+        const response = await axios.delete(`https://full-stack-ecommerce-website-api.vercel.app/api/deleteOrder/${id}`,{withCredentials:true});
         return response.data;
     } catch (error) {
         return rejectWithValue(error.response.data.message);
@@ -52,7 +52,7 @@ const deleteOrder= createAsyncThunk("delete/deleteOrder", async (id,{rejectWithV
 const updateOrder = createAsyncThunk("update/updateOrder", async (data,{rejectWithValue}) => {
     try {
         const config={headers:{"Content-Type":"application/json"},withCredentials:true};
-        const response = await axios.put(`https://full-stack-ecommerce-website-api.vercel.app//api/updateOrderStatus/${data.id}`,data.value,config);
+        const response = await axios.put(`https://full-stack-ecommerce-website-api.vercel.app/api/updateOrderStatus/${data.id}`,data.value,config);
         return response.data;
     } catch (error) {
         return rejectWithValue(error.response.data.message);
