@@ -4,7 +4,7 @@ import axios from "axios";
 const loggedIn = createAsyncThunk("post/postuserDetail", async (data,{rejectWithValue}) => {
     try {
         const config={headers:{"Content-Type":"application/json"},withCredentials:true};
-        const response = await axios.post(`https://ecommerce-plaza-aryanhac.onrender.com/api/logIn`,data,config);
+        const response = await axios.post(`https://full-stack-ecommerce-website-6358.vercel.app/api/logIn`,data,config);
         return response.data;
     }catch(error) {
         return rejectWithValue(error.response.data.message);
@@ -14,7 +14,7 @@ const loggedIn = createAsyncThunk("post/postuserDetail", async (data,{rejectWith
 const register = createAsyncThunk("post/postuserRegisterDetail", async (data,{rejectWithValue}) => {
     try {
         const config={headers:{"Content-Type":"multipart/form-data"},withCredentials:true};
-        const response = await axios.post(`https://ecommerce-plaza-aryanhac.onrender.com/api/register`,data,config);
+        const response = await axios.post(`https://full-stack-ecommerce-website-6358.vercel.app/api/register`,data,config);
         return response.data;
     } catch (error) {
         return rejectWithValue(error.response.data.message);
@@ -23,7 +23,7 @@ const register = createAsyncThunk("post/postuserRegisterDetail", async (data,{re
 // getting user after loading the page 
 const loadUser = createAsyncThunk("get/getuserDetail", async (data,{rejectWithValue}) => {
     try {
-        const response = await axios.get(`https://ecommerce-plaza-aryanhac.onrender.com/api/profile`,{withCredentials:true});
+        const response = await axios.get(`https://full-stack-ecommerce-website-6358.vercel.app/api/profile`,{withCredentials:true});
         return response.data;
     } catch (error) {
         return rejectWithValue(error.response.data.message);
@@ -32,7 +32,7 @@ const loadUser = createAsyncThunk("get/getuserDetail", async (data,{rejectWithVa
 //LogOut
 const logOutUser= createAsyncThunk("get/getLogOut", async (data,{rejectWithValue}) => {
     try {
-        const response = await axios.get(`https://ecommerce-plaza-aryanhac.onrender.com/api/logOut`,{withCredentials:true});
+        const response = await axios.get(`https://full-stack-ecommerce-website-6358.vercel.app/api/logOut`,{withCredentials:true});
         return response.data;
     } catch (error) {
         return rejectWithValue(error.response.data.message);
@@ -42,7 +42,7 @@ const logOutUser= createAsyncThunk("get/getLogOut", async (data,{rejectWithValue
 const updateProfile = createAsyncThunk("update/updateProfile", async (data,{rejectWithValue}) => {
     try {
         const config={headers:{"Content-Type":"multipart/form-data"},withCredentials:true};
-        const response = await axios.put(`https://ecommerce-plaza-aryanhac.onrender.com/api/profile/update`,data,config);
+        const response = await axios.put(`https://full-stack-ecommerce-website-6358.vercel.app/api/profile/update`,data,config);
         return response.data;
     } catch (error) {
         return rejectWithValue(error.response.data.message);
@@ -52,7 +52,7 @@ const updateProfile = createAsyncThunk("update/updateProfile", async (data,{reje
 const updatePassword = createAsyncThunk("update/updatePassword", async (data,{rejectWithValue}) => {
     try {
         const config={headers:{"Content-Type":"application/json"},withCredentials:true};
-        const response = await axios.put(`https://ecommerce-plaza-aryanhac.onrender.com/api/profile/updatePassword`,data,config);
+        const response = await axios.put(`https://full-stack-ecommerce-website-6358.vercel.app/api/profile/updatePassword`,data,config);
         return response.data;
     } catch (error) {
         return rejectWithValue(error.response.data.message);
@@ -61,7 +61,7 @@ const updatePassword = createAsyncThunk("update/updatePassword", async (data,{re
 // getAllUsers ---admin
 const getAllUsers= createAsyncThunk("get/getAllUsers", async (data,{rejectWithValue}) => {
     try {
-        const response = await axios.get(`https://ecommerce-plaza-aryanhac.onrender.com/api/admin/users`,{withCredentials:true});
+        const response = await axios.get(`https://full-stack-ecommerce-website-6358.vercel.app/api/admin/users`,{withCredentials:true});
         return response.data;
     } catch (error) {
         return rejectWithValue(error.response.data.message);
@@ -70,7 +70,7 @@ const getAllUsers= createAsyncThunk("get/getAllUsers", async (data,{rejectWithVa
 // getUserDetail ---admin
 const getUserDetail= createAsyncThunk("get/getUserDetail", async (id,{rejectWithValue}) => {
     try {
-        const response = await axios.get(`https://ecommerce-plaza-aryanhac.onrender.com/api/admin/user/${id}`,{withCredentials:true});
+        const response = await axios.get(`https://full-stack-ecommerce-website-6358.vercel.app/api/admin/user/${id}`,{withCredentials:true});
         return response.data;
     } catch (error) {
         return rejectWithValue(error.response.data.message);
@@ -80,7 +80,7 @@ const getUserDetail= createAsyncThunk("get/getUserDetail", async (id,{rejectWith
 // deleteUser ---admin
 const deleteUser= createAsyncThunk("delete/deleteUser", async (id,{rejectWithValue}) => {
     try {
-        const response = await axios.delete(`https://ecommerce-plaza-aryanhac.onrender.com/api/admin/user/${id}`,{withCredentials:true});
+        const response = await axios.delete(`https://full-stack-ecommerce-website-6358.vercel.app/api/admin/user/${id}`,{withCredentials:true});
         return response.data;
     } catch (error) {
         return rejectWithValue(error.response.data.message);
@@ -89,7 +89,7 @@ const deleteUser= createAsyncThunk("delete/deleteUser", async (id,{rejectWithVal
 //  update ---admin
 const updateUser= createAsyncThunk("update/updateUser", async (data,{rejectWithValue}) => {
     try {
-        const response = await axios.put(`https://ecommerce-plaza-aryanhac.onrender.com/api/admin/user/${data.id}`,data.form,{withCredentials:true});
+        const response = await axios.put(`https://full-stack-ecommerce-website-6358.vercel.app/api/admin/user/${data.id}`,data.form,{withCredentials:true});
         return response.data;
     } catch (error) {
         return rejectWithValue(error.response.data.message);

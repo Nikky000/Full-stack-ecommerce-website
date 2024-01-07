@@ -1,5 +1,5 @@
 ## Ecommerce Store
-> URL: https://ecommerce-plaza-aryanhac.onrender.com/
+> URL: https://full-stack-ecommerce-website-6358.vercel.app/
 
 ## Description
 This Application in which customer can buy products

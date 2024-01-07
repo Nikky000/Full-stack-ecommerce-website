@@ -55,7 +55,7 @@ const Payment = () => {
 
     try {
       const config = { headers: { "Content-Type": "application/json" }, withCredentials: true };
-      const { data } = await axios.post(`https://ecommerce-plaza-aryanhac.onrender.com/api/payment/process`, payment, config);
+      const { data } = await axios.post(`https://full-stack-ecommerce-website-6358.vercel.app/api/payment/process`, payment, config);
       const client_Secret = data.client_secret;
       if (!stripe || !element) {
         return;

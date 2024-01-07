@@ -13,15 +13,15 @@ const About = () => {
    <div className='flex flex-col justify-center md:w-[50%] w-full items-center md:items-start'>
       <div className='my-8 text-center md:text-left'>
        <h3 className='text-2xl font-semibold'>Full Name:</h3>
-       <p className='text-lg font-sans'>Aryan Gupta</p>
+       <p className='text-lg font-sans'>Dilesh Chouhan</p>
        </div>
        <div className='my-8 text-center md:text-left'>
        <h3 className='text-2xl font-semibold'>Email:</h3>
-       <p className='text-lg font-sans'>ag98974461@gmail.com</p>
+       <p className='text-lg font-sans'>dileshchouhan86@gmail.com</p>
        </div>
        <div className='my-8 text-center md:text-left'>
        <h3 className='text-2xl font-semibold'>About:</h3>
-       <p className='text-lg font-sans'>Hello Everyone, I am Aryan Gupta. Thank you for visiting on this website. I am a full Stack Web Developer and this is one of my best project if you want code of this website you can visit on my github profile link available in the footer </p>
+       <p className='text-lg font-sans'>Hello Everyone, I am Dilesh Chouhan. Thank you for visiting on this website. I am a full Stack Web Developer and this is one of my best project if you want code of this website you can visit on my github profile link available in the footer </p>
        </div>
    </div>
    </div>
