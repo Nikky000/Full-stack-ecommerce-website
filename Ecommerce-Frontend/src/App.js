@@ -42,7 +42,7 @@ function App() {
   const [stripeKey,setStripeKey] = useState();
 
   const getStripeKey=async ()=>{
-    const response= await axios.get(`https://full-stack-ecommerce-website-6358.vercel.app/api/payment/apiKey`,{withCredentials:true});
+    const response= await axios.get(`https://full-stack-ecommerce-website-api.vercel.app/api/payment/apiKey`,{withCredentials:true});
     setStripeKey(response.data.key);
     
   }
