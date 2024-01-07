@@ -1,0 +1,11 @@
+const express=require('express');
+const {newOrder,getLoggedOrder,getSingleOrder,getAllOrders,updateOrderStatus,deleteOrder}=require('../Controllers/Order');
+const {isAuthentication,isAuthorizeRole}=require('../../middleware/authentication');
+const order=express.Router();
+order.route('/newOrder').post(isAuthentication,newOrder);
+order.route('/orders/me').get(isAuthentication,getLoggedOrder);
+order.route('/order/me/:id').get(isAuthentication,isAuthorizeRole("admin"),getSingleOrder);
+order.route('/getAllOrders').get(isAuthentication,isAuthorizeRole("admin"),getAllOrders);
+order.route('/updateOrderStatus/:id').put(isAuthentication,isAuthorizeRole("admin"),updateOrderStatus);
+order.route('/deleteOrder/:id').delete(isAuthentication,isAuthorizeRole("admin"),deleteOrder);
+module.exports=order;

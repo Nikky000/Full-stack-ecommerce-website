@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  Ecommerce-Frontend:
+    build:
+      context: ./Ecommerce-Frontend/
+    image: helloaryang/ecommerce-frontend
+    container_name: frontend
+    ports:
+      - "3000:80"
+
+  Ecommerce-Backend:
+    build:
+      context: ./Ecommerce-Backend/
+    image: helloaryang/ecommerce-backend
+    container_name: backend
+    ports:
+      - "80:4000"
+    volumes:
+      - ./config:/app/Ecommerce-Backend/config

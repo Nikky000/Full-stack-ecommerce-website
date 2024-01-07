@@ -1,0 +1,26 @@
+.pagination{
+    display:flex;
+
+}
+.page-item{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    border:1.5px solid black;
+
+}
+.page-item:hover{
+    background-color:rgb(208, 208, 208);
+}
+.page-link{
+    color:rgb(184, 178, 178);
+}
+.page-item:hover .page-link{
+    color:black
+}
+.pageItemActive{
+    background-color: tomato;
+}
+.pageLinkActive{
+    color:white;
+}

@@ -1,0 +1,25 @@
+# dependencies
+/Ecommerce-Frontend/node_modules
+/Ecommerce-Backend/node_modules
+/node_modules
+/Ecommerce-Frontend/.pnp
+/Ecommerce-Frontend/.pnp.js
+
+# testing
+/Ecommerce-Frontend/coverage
+
+# production
+/Ecommerce-Frontend/build
+
+# misc
+/Ecommerce-Backend/config/config.env
+/Ecommerce-Frontend/.DS_Store
+/Ecommerce-Frontend/.env
+/Ecommerce-Frontend/.env.local
+/Ecommerce-Frontend/.env.development.local
+/Ecommerce-Frontend/.env.test.local
+/Ecommerce-Frontend/.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

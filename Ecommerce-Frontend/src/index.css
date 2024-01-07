@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base{
+    li{
+        @apply px-4;
+        @apply cursor-pointer;
+    },
+    body{
+        @apply m-0;
+    },
+    *{
+        @apply m-0;
+    }
+}
+input[type=file]::-webkit-file-upload-button,
+input[type=file]::file-selector-button {
+    @apply text-white w-full bg-blue-400 outline-none h-full  border-none rounded-2xl;
+    margin-inline-start: 0rem;
+    margin-inline-end: 0rem;
+}

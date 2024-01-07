@@ -1,0 +1,15 @@
+.phone{
+    transition:all;
+    animation-name: down;
+    animation-duration: 2000ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes down {
+    from {
+        top:-64px;
+      }
+      to {
+        top:64px;
+      }
+}
