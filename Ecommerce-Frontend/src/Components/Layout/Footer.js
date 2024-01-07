@@ -13,7 +13,7 @@ const Footer = () => {
         <div className='w-full md:w-[40%] flex flex-col items-center my-6 p-2 '>
             <div className="text-[3rem] text-red-500 font-bold my-2">Ecommerce</div>
             <div>High Quality is our first priority</div>
-            <div>Copyright &copy; 2022 Aryan Gupta</div>
+            <div>Copyright &copy; 2022 Dilesh chouhan</div>
         </div>
         <div className='w-full md:w-[30%] flex flex-col items-center my-6 p-2 '>
             <div className='font-bold  underline'>Follow Us</div>
