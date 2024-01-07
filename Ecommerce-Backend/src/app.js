@@ -5,7 +5,7 @@ const app=express();
 const bodyParser =require('body-parser');
 const fileupload = require('express-fileupload');
 const path=require('path');
-var cors = require('cors')
+var cors = require('cors');
 
 //Config
 if(process.env.NODE_ENV!=='Production'){
