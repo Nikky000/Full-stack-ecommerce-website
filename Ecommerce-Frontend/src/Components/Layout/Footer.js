@@ -17,7 +17,7 @@ const Footer = () => {
         </div>
         <div className='w-full md:w-[30%] flex flex-col items-center my-6 p-2 '>
             <div className='font-bold  underline'>Follow Us</div>
-            <a href="https://www.instagram.com/aryangupta2065/?hl=en" className='hover:text-red-400' target='_blank' rel='noreferrer'>Instagram</a>
+            <a href="https://www.instagram.com/btwitsnik69/" className='hover:text-red-400' target='_blank' rel='noreferrer'>Instagram</a>
             <a href="https://github.com/Nikky000" className='hover:text-red-400' target='_blank' rel='noreferrer'>GitHub</a>
             <a href="https://www.facebook.com/dilesh.chouhan" className='hover:text-red-400' target='_blank' rel='noreferrer'>Facebook</a>
         </div>
